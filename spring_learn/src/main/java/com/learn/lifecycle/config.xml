@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.learn.lifecycle.Bean" name="bean1"
+		init-method="init" destroy-method="destroy">
+		<property name="price" value="10"></property>
+	</bean>
+	<bean class="com.learn.lifecycle.withIntf" name="bean2">
+		<property name="name" value="Prathamesh"></property>
+	</bean>
+	<bean class="com.learn.lifecycle.construct" name="example">
+		<property name="subject" value="Physics" />
+	</bean>
+	<context:annotation-config />
+
+</beans>
